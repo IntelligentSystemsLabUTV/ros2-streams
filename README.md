@@ -1,4 +1,4 @@
-# ros2_snip
+# ros2-streams
 
 Video stream visualizers for ROS 2 architectures.
 
