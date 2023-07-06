@@ -4,7 +4,7 @@ Video stream visualizers for ROS 2 architectures.
 
 ## Contents
 
-TODO
+- [x] [`recorder`](src/recorder/README.md): ROS 2 node for recording video streams.
 
 ---
 

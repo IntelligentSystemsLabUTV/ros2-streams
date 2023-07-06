@@ -1,0 +1,37 @@
+header_include_path: recorder/recorder.hpp
+namespace: ROS2Streams
+node_class_name: Recorder
+
+params:
+  grayscale:
+    type: bool
+    default_value: false
+    description: "Converts images to grayscale"
+    constraints: ""
+    read_only: true
+    var_name: grayscale_
+
+  output_path:
+    type: string
+    default_value: ""
+    description: "Path to save the recorded data"
+    constraints: ""
+    read_only: true
+    var_name: output_path_
+
+  topics:
+    type: string_array
+    default_value:
+      - "/camera/image_rect_color"
+    description: "Topics to record"
+    constraints: "Must be valid image topics base names"
+    read_only: true
+    var_name: topics_
+
+  transport:
+    type: string
+    default_value: "raw"
+    description: "Transport method to use for images"
+    constraints: "Either 'raw' or 'compressed'"
+    read_only: true
+    var_name: transport_
