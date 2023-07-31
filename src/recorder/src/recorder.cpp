@@ -94,7 +94,9 @@ void Recorder::image_callback(const Image::ConstSharedPtr & msg)
   std::string filename =
     output_path_ + "/" +
     camera_frame_id + "_" +
-    std::to_string(msg->header.stamp.sec * 1000000000 + msg->header.stamp.nanosec) +
+    std::to_string(
+    (uint64_t(msg->header.stamp.sec) * 1000000000UL +
+    uint64_t(msg->header.stamp.nanosec))) +
     ".jpg";
   cv::imwrite(filename, frame);
 }
